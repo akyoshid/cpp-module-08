@@ -6,13 +6,13 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 11:11:08 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/09/06 15:16:07 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/09/06 15:27:12 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <vector>
 #include <iostream>
-#include <exception>
+#include <stdexcept>
 #include "easyfind.hpp"
 
 int main() {

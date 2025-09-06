@@ -6,12 +6,12 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 11:11:37 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/09/06 15:21:55 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/09/06 15:27:19 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <algorithm>
-#include <exception>
+#include <stdexcept>
 
 template <typename T>
 typename T::iterator easyfind(T& container, int value) {
