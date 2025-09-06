@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 17:51:55 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/09/06 22:29:02 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/09/06 22:35:42 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void Span::addNumbers(
     numbers_.insert(numbers_.end(), first, last);
 }
 
-unsigned int Span::shortestSpan() {
+unsigned int Span::shortestSpan() const {
     if (numbers_.size() < 2)
         throw std::runtime_error("Span: shortestSpan: Not enough numbers");
     std::vector<int> sorted = numbers_;
@@ -63,7 +63,7 @@ unsigned int Span::shortestSpan() {
     return minSpan;
 }
 
-unsigned int Span::longestSpan() {
+unsigned int Span::longestSpan() const {
     if (numbers_.size() < 2)
         throw std::runtime_error("Span: longestSpan: Not enough numbers");
     int max = *std::max_element(numbers_.begin(), numbers_.end());
