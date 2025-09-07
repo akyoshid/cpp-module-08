@@ -6,7 +6,7 @@
 /*   By: akyoshid <akyoshid@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/06 22:31:31 by akyoshid          #+#    #+#             */
-/*   Updated: 2025/09/07 16:10:25 by akyoshid         ###   ########.fr       */
+/*   Updated: 2025/09/07 16:17:36 by akyoshid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int main()
     }
 
     std::cout << "=== Original test ===" << std::endl;
+
     it = mstack.begin();
     int i = 0;
     while (it != ite) {
@@ -68,8 +69,10 @@ int main()
         ++it;
         ++i;
     }
+
     MutantStack<int> cp1(mstack);
     MutantStack<int> cp2(s);
+
     const MutantStack<int> constMstack(mstack);
     MutantStack<int>::const_iterator cit = mstack.begin();
     MutantStack<int>::const_iterator cite = mstack.end();
@@ -85,5 +88,16 @@ int main()
         std::cout << *crit << std::endl;
         ++crit;
     }
+
+    MutantStack<int> largeStack;
+    for(int i = 0; i < 10000; ++i) {
+        largeStack.push(i);
+    }
+    while (!largeStack.empty()) {
+        std::cout << largeStack.top() << " ";
+        largeStack.pop();
+    }
+    std::cout << std::endl;
+
     return 0;
 }
